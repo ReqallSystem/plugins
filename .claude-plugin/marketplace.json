@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "reqall-plugins",
+  "description": "Reqall plugins for AI coding agents",
+  "owner": {
+    "name": "ReqallSystem"
+  },
+  "plugins": [
+    {
+      "name": "reqall",
+      "description": "Persistent semantic knowledgebase for AI agents — hooks, skills, and MCP integration",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/claude-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/claude-plugin"
+    }
+  ]
+}
