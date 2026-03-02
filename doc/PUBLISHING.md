@@ -154,12 +154,12 @@ To add other plugins, add entries to the `plugins` array in `.claude-plugin/mark
 
 ---
 
-## Current Versions (as of 2026-02-28)
+## Current Versions (as of 2026-03-01)
 
 | Package | package.json | npm latest | plugin.json |
 |---------|-------------|------------|-------------|
 | @reqall/core | — | 0.1.0 | — |
-| @reqall/claude-plugin | 0.0.9 | 0.0.7 | 0.0.9 |
+| @reqall/claude-plugin | 2026.3.1 | 0.0.7 | 2026.3.1 |
 | @reqall/cursor-plugin | 0.0.3 | 0.0.3 | — |
 | @reqall/copilot-plugin | 0.0.3 | 0.0.3 | — |
 | @reqall/codex-plugin | 0.0.3 | 0.0.3 | — |
