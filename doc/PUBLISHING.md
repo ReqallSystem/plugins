@@ -159,7 +159,7 @@ To add other plugins, add entries to the `plugins` array in `.claude-plugin/mark
 | Package | package.json | npm latest | plugin.json |
 |---------|-------------|------------|-------------|
 | @reqall/core | — | 0.1.0 | — |
-| @reqall/claude-plugin | 2026.3.1 | 0.0.7 | 2026.3.1 |
+| @reqall/claude-plugin | 2026.3.2 | 0.0.7 | 2026.3.2 |
 | @reqall/cursor-plugin | 0.0.3 | 0.0.3 | — |
 | @reqall/copilot-plugin | 0.0.3 | 0.0.3 | — |
 | @reqall/codex-plugin | 0.0.3 | 0.0.3 | — |
