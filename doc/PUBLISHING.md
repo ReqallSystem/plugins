@@ -78,7 +78,7 @@ npm publish --access public
 git add -A && git commit -m "v<VERSION>" && git push
 ```
 
-**Note:** Uses `@reqall/core: "^0.0.3"` from npm (not file: reference).
+**Note:** Uses `@reqall/core: "^2026.2.1"` from npm (not file: reference).
 If core has breaking changes, update the version range and test first.
 
 ---
@@ -154,13 +154,14 @@ To add other plugins, add entries to the `plugins` array in `.claude-plugin/mark
 
 ---
 
-## Current Versions (as of 2026-03-07)
+## Current Versions (as of 2026-03-08)
 
-| Package | package.json | npm latest | plugin.json |
-|---------|-------------|------------|-------------|
-| @reqall/core | — | 0.1.0 | — |
-| @reqall/claude-plugin | 2026.3.8 | 0.0.7 | 2026.3.8 |
-| @reqall/cursor-plugin | 0.0.3 | 0.0.3 | — |
-| @reqall/copilot-plugin | 0.0.3 | 0.0.3 | — |
-| @reqall/codex-plugin | 0.0.3 | 0.0.3 | — |
-| @reqall/gemini-plugin | 0.0.3 | 0.0.3 | — |
+| Package | package.json | plugin.json |
+|---------|-------------|-------------|
+| @reqall/core | 2026.3.1 | — |
+| @reqall/auth | 2026.3.1 | — |
+| @reqall/claude-plugin | 2026.3.8 | 2026.3.8 |
+| @reqall/cursor-plugin | 2026.2.1 | — |
+| @reqall/copilot-plugin | 2026.2.1 | — |
+| @reqall/codex-plugin | 2026.3.10 | — |
+| @reqall/gemini-plugin | 2026.2.1 | — |
