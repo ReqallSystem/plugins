@@ -149,8 +149,7 @@ cd plugins
 git add -A && git commit -m "update marketplace listing" && git push
 ```
 
-The marketplace currently lists only the claude-plugin.
-To add other plugins, add entries to the `plugins` array in `.claude-plugin/marketplace.json`.
+The marketplace lists all five plugins in the ecosystem.
 
 ---
 

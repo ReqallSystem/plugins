@@ -15,6 +15,46 @@
         "url": "https://github.com/ReqallSystem/claude-plugin.git"
       },
       "homepage": "https://github.com/ReqallSystem/claude-plugin"
+    },
+    {
+      "name": "reqall-cursor",
+      "description": "Persistent semantic knowledgebase for AI agents — rules-based integration for Cursor",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/cursor-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/cursor-plugin"
+    },
+    {
+      "name": "reqall-copilot",
+      "description": "Persistent semantic knowledgebase for AI agents — VS Code configuration for GitHub Copilot",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/copilot-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/copilot-plugin"
+    },
+    {
+      "name": "reqall-codex",
+      "description": "Persistent semantic knowledgebase for AI agents — guardrail script and agent policies for OpenAI Codex",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/codex-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/codex-plugin"
+    },
+    {
+      "name": "reqall-gemini",
+      "description": "Persistent semantic knowledgebase for AI agents — extension manifest and commands for Google Gemini",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/gemini-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/gemini-plugin"
     }
   ]
 }
