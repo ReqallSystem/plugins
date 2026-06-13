@@ -1,0 +1,104 @@
+{
+  "format": "reqall.agent-marketplace",
+  "schemaVersion": 1,
+  "name": "reqall-plugins",
+  "displayName": "Reqall Plugins",
+  "description": "Reqall plugin catalog for AI coding agents.",
+  "owner": {
+    "name": "ReqallSystem",
+    "url": "https://github.com/ReqallSystem"
+  },
+  "homepage": "https://reqall.net",
+  "auth": {
+    "environment": [
+      "REQALL_API_KEY"
+    ],
+    "mcpServer": "https://www.reqall.net/mcp"
+  },
+  "marketplaces": {
+    "claudeCode": ".claude-plugin/marketplace.json",
+    "codex": ".agents/plugins/marketplace.json"
+  },
+  "plugins": [
+    {
+      "id": "reqall-claude",
+      "name": "reqall",
+      "displayName": "Reqall for Claude Code",
+      "agent": "claude-code",
+      "description": "Hooks, skills, and MCP integration for persistent semantic memory.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/claude-plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/claude-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/claude-plugin"
+    },
+    {
+      "id": "reqall-codex",
+      "name": "reqall",
+      "displayName": "Reqall for OpenAI Codex",
+      "agent": "openai-codex",
+      "description": "Codex skills, MCP/app config, guardrail script, and agent policies for persistent project memory.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/codex-plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/codex-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/codex-plugin"
+    },
+    {
+      "id": "reqall-cursor",
+      "name": "reqall-cursor",
+      "displayName": "Reqall for Cursor",
+      "agent": "cursor",
+      "description": "Rules-based integration for Cursor.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/cursor-plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/cursor-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/cursor-plugin"
+    },
+    {
+      "id": "reqall-copilot",
+      "name": "reqall-copilot",
+      "displayName": "Reqall for GitHub Copilot",
+      "agent": "github-copilot",
+      "description": "VS Code configuration for GitHub Copilot.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/copilot-plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/copilot-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/copilot-plugin"
+    },
+    {
+      "id": "reqall-gemini",
+      "name": "reqall-gemini",
+      "displayName": "Reqall for Google Gemini",
+      "agent": "google-gemini",
+      "description": "Extension manifest and commands for Google Gemini.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/gemini-plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/gemini-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/gemini-plugin"
+    }
+  ]
+}

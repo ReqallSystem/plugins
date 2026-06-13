@@ -1,0 +1,22 @@
+{
+  "name": "reqall-plugins",
+  "interface": {
+    "displayName": "Reqall Plugins"
+  },
+  "plugins": [
+    {
+      "name": "reqall",
+      "description": "Persistent semantic memory workflows for Codex agents",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/codex-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/codex-plugin",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
