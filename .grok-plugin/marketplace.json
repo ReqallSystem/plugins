@@ -1,0 +1,20 @@
+{
+  "name": "reqall-plugins",
+  "description": "Reqall plugins for AI coding agents",
+  "owner": {
+    "name": "ReqallSystem"
+  },
+  "plugins": [
+    {
+      "name": "reqall",
+      "description": "Persistent semantic memory for Grok Build — skills, hooks, and MCP",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/grok-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/grok-plugin",
+      "version": "2026.8.1"
+    }
+  ]
+}

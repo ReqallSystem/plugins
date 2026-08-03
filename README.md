@@ -19,9 +19,20 @@ Codex marketplace metadata is provided through `.agents/plugins/marketplace.json
 
 For local development, keep a sibling checkout at `../codex-plugin`; the marketplace itself should continue to link the GitHub source repo.
 
+### Grok Build
+
+Grok Build marketplace metadata lives in `.grok-plugin/marketplace.json`. Install with:
+
+```text
+grok plugin marketplace add ReqallSystem/plugins
+grok plugin install reqall --trust
+```
+
+`--trust` is required so plugin hooks and the Reqall MCP server activate.
+
 ### Other Agents
 
-`agent-marketplace.json` is a vendor-neutral catalog for agentic systems that want to discover the Reqall ecosystem without depending on the Claude or Codex marketplace schemas. It lists the supported agents, source repositories, npm package names, and shared Reqall MCP/auth requirements.
+`agent-marketplace.json` is a vendor-neutral catalog for agentic systems that want to discover the Reqall ecosystem without depending on the Claude, Codex, or Grok marketplace schemas. It lists the supported agents, source repositories, npm package names, and shared Reqall MCP/auth requirements.
 
 ## Plugin Ecosystem
 
@@ -29,6 +40,7 @@ For local development, keep a sibling checkout at `../codex-plugin`; the marketp
 |---------|----------|-------------|
 | [@reqall/claude-plugin](https://github.com/ReqallSystem/claude-plugin) | Claude Code | Hooks, skills, and MCP integration |
 | [@reqall/codex-plugin](https://github.com/ReqallSystem/codex-plugin) | OpenAI Codex | Skills, MCP/app config, guardrail script, and agent policies |
+| [@reqall/grok-plugin](https://github.com/ReqallSystem/grok-plugin) | Grok Build | Skills, hooks, and MCP integration |
 | [@reqall/cursor-plugin](https://github.com/ReqallSystem/cursor-plugin) | Cursor | Rules-based integration |
 | [@reqall/copilot-plugin](https://github.com/ReqallSystem/copilot-plugin) | GitHub Copilot | VS Code configuration |
 | [@reqall/gemini-plugin](https://github.com/ReqallSystem/gemini-plugin) | Google Gemini | Extension manifest and commands |

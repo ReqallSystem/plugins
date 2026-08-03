@@ -147,14 +147,40 @@ git add -A && git commit -m "v<VERSION>" && git push
 
 ---
 
+## @reqall/grok-plugin
+
+No build step; static Grok Build plugin files only.
+
+```bash
+cd grok-plugin
+
+# 1. Bump versions in BOTH files:
+#    - package.json
+#    - plugin.json
+
+# 2. Verify contents
+npm pack --dry-run
+
+# 3. Publish to npm
+npm publish --access public
+
+# 4. Push to GitHub
+git add -A && git commit -m "v<VERSION>" && git push
+```
+
+After publishing, confirm this aggregate marketplace repo still points to `https://github.com/ReqallSystem/grok-plugin.git` in `.grok-plugin/marketplace.json`.
+
+---
+
 ## plugins (marketplace aggregate)
 
-This repo defines three catalog surfaces:
+This repo defines four catalog surfaces:
 
 | Surface | File | Notes |
 |---------|------|-------|
 | Claude Code | `.claude-plugin/marketplace.json` | Existing URL-based Claude marketplace; keep this compatible with Claude Code. |
 | OpenAI Codex | `.agents/plugins/marketplace.json` | Codex marketplace metadata; entry must point to `https://github.com/ReqallSystem/codex-plugin.git`. |
+| Grok Build | `.grok-plugin/marketplace.json` | Grok marketplace metadata; entry must point to `https://github.com/ReqallSystem/grok-plugin.git`. |
 | Other agents | `agent-marketplace.json` | Vendor-neutral discovery catalog with repositories, packages, and shared MCP/auth metadata. |
 
 ```bash
@@ -165,11 +191,11 @@ cd plugins
 git add -A && git commit -m "update marketplace listing" && git push
 ```
 
-The marketplace ecosystem lists Claude Code, OpenAI Codex, Cursor, GitHub Copilot, and Google Gemini integrations.
+The marketplace ecosystem lists Claude Code, OpenAI Codex, Grok Build, Cursor, GitHub Copilot, and Google Gemini integrations.
 
 ---
 
-## Current Versions (local checkout on 2026-06-13)
+## Current Versions (local checkout on 2026-08-03)
 
 | Package | package.json | plugin.json |
 |---------|-------------|-------------|
@@ -180,5 +206,6 @@ The marketplace ecosystem lists Claude Code, OpenAI Codex, Cursor, GitHub Copilo
 | @reqall/copilot-plugin | 2026.2.1 | N/A |
 | @reqall/codex-plugin | 2026.4.2 | 2026.4.1 in `../codex-plugin` |
 | @reqall/gemini-plugin | 2026.2.1 | N/A |
+| @reqall/grok-plugin | 2026.8.1 | 2026.8.1 |
 
 The Claude package and Claude plugin manifest versions in the local sibling checkout are not currently aligned; sync them before the next Claude plugin publish.

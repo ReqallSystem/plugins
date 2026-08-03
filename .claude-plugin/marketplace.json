@@ -55,6 +55,16 @@
         "url": "https://github.com/ReqallSystem/gemini-plugin.git"
       },
       "homepage": "https://github.com/ReqallSystem/gemini-plugin"
+    },
+    {
+      "name": "reqall-grok",
+      "description": "Persistent semantic knowledgebase for AI agents — skills, hooks, and MCP for Grok Build",
+      "category": "productivity",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ReqallSystem/grok-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/grok-plugin"
     }
   ]
 }

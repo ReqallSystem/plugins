@@ -99,6 +99,22 @@
         "name": "@reqall/gemini-plugin"
       },
       "homepage": "https://github.com/ReqallSystem/gemini-plugin"
+    },
+    {
+      "id": "reqall-grok",
+      "name": "reqall",
+      "displayName": "Reqall for Grok Build",
+      "agent": "grok-build",
+      "description": "Skills, hooks, and MCP integration for persistent semantic memory in Grok Build.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/grok-plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/grok-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/grok-plugin"
     }
   ]
 }
