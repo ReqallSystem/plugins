@@ -115,7 +115,8 @@ cd codex-plugin
 #    - package.json
 #    - .codex-plugin/plugin.json
 
-# 2. Verify contents
+# 2. Run behavioral tests and verify contents
+npm test
 npm pack --dry-run
 
 # 3. Publish to npm
@@ -125,7 +126,7 @@ npm publish --access public
 git add -A && git commit -m "v<VERSION>" && git push
 ```
 
-After publishing, confirm this aggregate marketplace repo still points to `https://github.com/ReqallSystem/codex-plugin.git`.
+After publishing, confirm this aggregate marketplace repo still points to `https://github.com/ReqallSystem/codex-plugin.git`, install it with `codex plugin add reqall@reqall-plugins`, review the bundled hooks with `/hooks`, and smoke-test it in a new thread.
 
 ---
 
@@ -204,7 +205,7 @@ The marketplace ecosystem lists Claude Code, OpenAI Codex, Grok Build, Cursor, G
 | @reqall/claude-plugin | 2026.4.1 | 2026.3.30 |
 | @reqall/cursor-plugin | 2026.2.1 | N/A |
 | @reqall/copilot-plugin | 2026.2.1 | N/A |
-| @reqall/codex-plugin | 2026.4.2 | 2026.4.1 in `../codex-plugin` |
+| @reqall/codex-plugin | 2026.8.0 | 2026.8.0 |
 | @reqall/gemini-plugin | 2026.2.1 | N/A |
 | @reqall/grok-plugin | 2026.8.1 | 2026.8.1 |
 

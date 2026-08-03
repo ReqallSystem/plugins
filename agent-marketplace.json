@@ -10,9 +10,6 @@
   },
   "homepage": "https://reqall.net",
   "auth": {
-    "environment": [
-      "REQALL_API_KEY"
-    ],
     "mcpServer": "https://www.reqall.net/mcp"
   },
   "marketplaces": {
@@ -41,7 +38,7 @@
       "name": "reqall",
       "displayName": "Reqall for OpenAI Codex",
       "agent": "openai-codex",
-      "description": "Codex skills, MCP/app config, guardrail script, and agent policies for persistent project memory.",
+      "description": "Codex lifecycle hooks, skills, MCP/app config, and guardrails for persistent project memory.",
       "source": {
         "type": "git",
         "url": "https://github.com/ReqallSystem/codex-plugin.git"
