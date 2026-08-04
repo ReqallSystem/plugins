@@ -207,6 +207,6 @@ The marketplace ecosystem lists Claude Code, OpenAI Codex, Grok Build, Cursor, G
 | @reqall/copilot-plugin | 2026.2.1 | N/A |
 | @reqall/codex-plugin | 2026.8.0 | 2026.8.0 |
 | @reqall/gemini-plugin | 2026.2.1 | N/A |
-| @reqall/grok-plugin | 2026.8.1 | 2026.8.1 |
+| @reqall/grok-plugin | 2026.8.2 | 2026.8.2 |
 
 The Claude package and Claude plugin manifest versions in the local sibling checkout are not currently aligned; sync them before the next Claude plugin publish.
