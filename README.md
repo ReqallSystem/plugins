@@ -50,6 +50,27 @@ grok plugin install reqall --trust
 
 `--trust` is required so plugin hooks and the Reqall MCP server activate.
 
+### Hermes Agent
+
+Hermes has no third-party marketplace schema in this repo. Discover the plugin via `agent-marketplace.json` (`reqall-hermes`) and install from git into the **current** `$HERMES_HOME`:
+
+```bash
+hermes plugins install ReqallSystem/hermes-plugin --enable
+python3 "$(hermes plugins path reqall 2>/dev/null || echo ~/.hermes/plugins/reqall)/ensure-install.py"
+```
+
+Named profiles are separate homes. Enabling `reqall` in a profile `config.yaml` does **not** copy plugin files. After `ensure-install.py`, restart **that** profile's gateway from an external shell and `/new`.
+
+Secrets: `REQALL_API_KEY` or `MCP_REQALL_API_KEY` in the profile `.env`. Optional host MCP:
+
+```yaml
+mcp_servers:
+  reqall:
+    url: https://www.reqall.net/mcp
+    headers:
+      Authorization: Bearer ${REQALL_API_KEY}
+```
+
 ### Other Agents
 
 `agent-marketplace.json` is a vendor-neutral catalog for agentic systems that want to discover the Reqall ecosystem without depending on the Claude, Codex, or Grok marketplace schemas. It lists the supported agents, source repositories, npm package names, and shared Reqall MCP/auth requirements.
@@ -64,6 +85,7 @@ grok plugin install reqall --trust
 | [@reqall/cursor-plugin](https://github.com/ReqallSystem/cursor-plugin) | Cursor | Rules-based integration |
 | [@reqall/copilot-plugin](https://github.com/ReqallSystem/copilot-plugin) | GitHub Copilot | VS Code configuration |
 | [@reqall/gemini-plugin](https://github.com/ReqallSystem/gemini-plugin) | Google Gemini | Extension manifest and commands |
+| [hermes-plugin](https://github.com/ReqallSystem/hermes-plugin) | Hermes Agent | Python hooks, skills, plugin HTTP tool, optional host MCP |
 
 ### Supporting Packages
 

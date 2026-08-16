@@ -112,6 +112,25 @@
         "name": "@reqall/grok-plugin"
       },
       "homepage": "https://github.com/ReqallSystem/grok-plugin"
+    },
+    {
+      "id": "reqall-hermes",
+      "name": "reqall",
+      "displayName": "Reqall for Hermes Agent",
+      "agent": "hermes",
+      "description": "Python plugin: hooks, skills, HTTP reqall tool, optional host MCP. Installs into the current $HERMES_HOME/plugins; run ensure-install.py for other profiles that enabled reqall.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/hermes-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/hermes-plugin",
+      "install": {
+        "notes": [
+          "hermes plugins install ReqallSystem/hermes-plugin --enable",
+          "python3 $HERMES_HOME/plugins/reqall/ensure-install.py",
+          "Restart that profile's gateway from an external shell, then /new"
+        ]
+      }
     }
   ]
 }
