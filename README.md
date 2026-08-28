@@ -50,6 +50,32 @@ grok plugin install reqall --trust
 
 `--trust` is required so plugin hooks and the Reqall MCP server activate.
 
+### Grok Bot
+
+Grok Bot (Cursor's desktop assistant) is a separate harness from Grok Build. Discover it via `agent-marketplace.json` (`reqall-grok-bot`). There is no Grok Bot marketplace schema in this repo, and this plugin must **not** be added to `.grok-plugin/marketplace.json` (Grok Build only).
+
+Source: [grok-bot-plugin](https://github.com/ReqallSystem/grok-bot-plugin). Do not install [grok-plugin](https://github.com/ReqallSystem/grok-plugin) or run `grok plugin marketplace add` / `grok plugin install` for Grok Bot.
+
+The package is skills + hosted MCP + `AGENTS.md`. Grok Bot has no hook runtime.
+
+Preferred auth is native MCP OAuth to `https://www.reqall.net/mcp`. In Grok Bot, add that URL from **Plugins** or **Customize → MCPs** and finish the Authorize card. Cursor redirect URIs were registered on the Reqall MCP OAuth client as of 2026-08-28.
+
+Fallback: API key or a token from `reqall login`, stored as `REQALL_API_KEY` (never in chat or committed config).
+
+Local plugin install:
+
+```bash
+git clone https://github.com/ReqallSystem/grok-bot-plugin.git
+ln -sfn "$PWD/grok-bot-plugin" ~/.cursor/plugins/local/reqall
+```
+
+Reload the window. Copy or merge `AGENTS.md` into the project root so context-before-work and persist-before-done stay on. For a project-only skill install without the plugin folder:
+
+```bash
+mkdir -p .cursor/skills
+cp -R /path/to/grok-bot-plugin/skills/* .cursor/skills/
+```
+
 ### Hermes Agent
 
 Hermes has no third-party marketplace schema in this repo. Discover the plugin via `agent-marketplace.json` (`reqall-hermes`) and install from git into the **current** `$HERMES_HOME`:
@@ -82,6 +108,7 @@ mcp_servers:
 | [@reqall/claude-plugin](https://github.com/ReqallSystem/claude-plugin) | Claude Code | Hooks, skills, and MCP integration |
 | [@reqall/codex-plugin](https://github.com/ReqallSystem/codex-plugin) | OpenAI Codex | Lifecycle hooks, skills, MCP/app config, and memory guardrails |
 | [@reqall/grok-plugin](https://github.com/ReqallSystem/grok-plugin) | Grok Build | Skills, hooks, and MCP integration |
+| [grok-bot-plugin](https://github.com/ReqallSystem/grok-bot-plugin) | Grok Bot | Skills, hosted MCP, and AGENTS.md (no hook runtime) |
 | [@reqall/cursor-plugin](https://github.com/ReqallSystem/cursor-plugin) | Cursor | Rules-based integration |
 | [@reqall/copilot-plugin](https://github.com/ReqallSystem/copilot-plugin) | GitHub Copilot | VS Code configuration |
 | [@reqall/gemini-plugin](https://github.com/ReqallSystem/gemini-plugin) | Google Gemini | Extension manifest and commands |
