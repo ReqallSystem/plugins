@@ -192,7 +192,7 @@ cd plugins
 git add -A && git commit -m "update marketplace listing" && git push
 ```
 
-The marketplace ecosystem lists Claude Code, OpenAI Codex, Grok Build, Cursor, GitHub Copilot, and Google Gemini integrations.
+The marketplace ecosystem lists Claude Code, OpenAI Codex, Grok Build, Grok Bot, Cursor, GitHub Copilot, Google Gemini, and Hermes integrations. Do not list `grok-bot-plugin` in `.grok-plugin/marketplace.json` — that file is Grok Build only.
 
 ---
 

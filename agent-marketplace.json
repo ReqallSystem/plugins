@@ -114,6 +114,25 @@
       "homepage": "https://github.com/ReqallSystem/grok-plugin"
     },
     {
+      "id": "reqall-grok-bot",
+      "name": "reqall",
+      "displayName": "Reqall for Grok Bot",
+      "agent": "grok-bot",
+      "description": "Skills, hosted MCP, and AGENTS.md autopilot for Grok Bot (Cursor’s desktop assistant). Not Grok Build — no hooks, no grok CLI marketplace.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/grok-bot-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/grok-bot-plugin",
+      "install": {
+        "notes": [
+          "In Grok Bot: Plugins or Customize → MCPs → add https://www.reqall.net/mcp → Authorize (OAuth preferred)",
+          "git clone https://github.com/ReqallSystem/grok-bot-plugin.git && ln -sfn \"$PWD/grok-bot-plugin\" ~/.cursor/plugins/local/reqall",
+          "API key / reqall login is fallback only — do not use grok plugin marketplace add"
+        ]
+      }
+    },
+    {
       "id": "reqall-hermes",
       "name": "reqall",
       "displayName": "Reqall for Hermes Agent",

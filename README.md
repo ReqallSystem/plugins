@@ -50,6 +50,21 @@ grok plugin install reqall --trust
 
 `--trust` is required so plugin hooks and the Reqall MCP server activate.
 
+### Grok Bot
+
+Grok Bot (Cursor’s desktop assistant) is **not** Grok Build. Do not run `grok plugin marketplace add`, `grok plugin install`, or edit `~/.grok/config.toml`. There is no Grok Bot marketplace schema in this aggregate; discover the plugin via `agent-marketplace.json` (`reqall-grok-bot`).
+
+Preferred: native MCP OAuth. In Grok Bot, open **Plugins** (or **Customize → MCPs**), add `https://www.reqall.net/mcp`, and finish Authorize. The connector appears as `user-Reqall` when connected.
+
+Optional local plugin (skills + `AGENTS.md` autopilot):
+
+```bash
+git clone https://github.com/ReqallSystem/grok-bot-plugin.git
+ln -sfn "$PWD/grok-bot-plugin" ~/.cursor/plugins/local/reqall
+```
+
+Reload the window. API key Bearer or a token from `reqall login` is fallback only. On Teams / Enterprise, local plugin imports may be disabled by admin policy — use the MCP connector path instead.
+
 ### Hermes Agent
 
 Hermes has no third-party marketplace schema in this repo. Discover the plugin via `agent-marketplace.json` (`reqall-hermes`) and install from git into the **current** `$HERMES_HOME`:
@@ -82,6 +97,7 @@ mcp_servers:
 | [@reqall/claude-plugin](https://github.com/ReqallSystem/claude-plugin) | Claude Code | Hooks, skills, and MCP integration |
 | [@reqall/codex-plugin](https://github.com/ReqallSystem/codex-plugin) | OpenAI Codex | Lifecycle hooks, skills, MCP/app config, and memory guardrails |
 | [@reqall/grok-plugin](https://github.com/ReqallSystem/grok-plugin) | Grok Build | Skills, hooks, and MCP integration |
+| [grok-bot-plugin](https://github.com/ReqallSystem/grok-bot-plugin) | Grok Bot | Skills, hosted MCP, and AGENTS.md autopilot (no hooks) |
 | [@reqall/cursor-plugin](https://github.com/ReqallSystem/cursor-plugin) | Cursor | Rules-based integration |
 | [@reqall/copilot-plugin](https://github.com/ReqallSystem/copilot-plugin) | GitHub Copilot | VS Code configuration |
 | [@reqall/gemini-plugin](https://github.com/ReqallSystem/gemini-plugin) | Google Gemini | Extension manifest and commands |
