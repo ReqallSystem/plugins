@@ -114,6 +114,18 @@
       "homepage": "https://github.com/ReqallSystem/grok-plugin"
     },
     {
+      "id": "reqall-grok-bot",
+      "name": "reqall",
+      "displayName": "Reqall for Grok Bot",
+      "agent": "grok-bot",
+      "description": "Skills, hosted MCP, and AGENTS.md for persistent semantic memory in Grok Bot (Cursor desktop assistant). Not Grok Build.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/grok-bot-plugin.git"
+      },
+      "homepage": "https://github.com/ReqallSystem/grok-bot-plugin"
+    },
+    {
       "id": "reqall-hermes",
       "name": "reqall",
       "displayName": "Reqall for Hermes Agent",
