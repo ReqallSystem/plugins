@@ -124,6 +124,19 @@ mcp_servers:
 
 All plugins connect to the Reqall MCP server at `https://www.reqall.net/mcp`. Use native OAuth where the host supports it; `REQALL_API_KEY` is the fallback for hosts without a compatible OAuth flow.
 
+## SLEEP guidance checks
+
+Claude, Codex, Hermes, Grok Build, Grok Bot and Pi ship SLEEP skills. Their WORK
+review policy follows [the canonical SLEEP documentation](https://github.com/fingerskier/reqall_net/blob/main/doc/SLEEP.md):
+compare with intent and existing knowledge, preserve new evidence even when work
+aligns, and discard only when no unique durable information remains.
+
+With those six repositories and `reqall_net` checked out beside this repository,
+run `python -B -m unittest discover -s test -p 'test_sleep_guidance.py' -v`.
+The offline checks cover instruction parity, judgment examples and Claude's tool
+allowlist; they do not evaluate model judgment or perform live SLEEP mutations.
+Keep host-specific routing, registration and package tests in each plugin.
+
 ## Publishing
 
 See [doc/PUBLISHING.md](doc/PUBLISHING.md) for version management and release workflow.
