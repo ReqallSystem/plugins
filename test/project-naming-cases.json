@@ -98,6 +98,33 @@
       }
     },
     {
+      "id": "reject-git-escaped-name",
+      "expected": "acme/local",
+      "source": "reqall_yml",
+      "remote": "https://github.com/acme/r%C3%A9po.git",
+      "files": {
+        ".reqall.yml": "project: acme/local"
+      }
+    },
+    {
+      "id": "reject-git-unicode-name",
+      "expected": "acme/local",
+      "source": "reqall_yml",
+      "remote": "https://github.com/acme/r\u00e9po.git",
+      "files": {
+        ".reqall.yml": "project: acme/local"
+      }
+    },
+    {
+      "id": "reject-git-space-name",
+      "expected": "acme/local",
+      "source": "reqall_yml",
+      "remote": "git@github.com:acme/my repo.git",
+      "files": {
+        ".reqall.yml": "project: acme/local"
+      }
+    },
+    {
       "id": "label-unquoted",
       "expected": "acme/notes",
       "source": "prompt",
