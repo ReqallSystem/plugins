@@ -125,6 +125,15 @@
       }
     },
     {
+      "id": "reject-git-edge-space",
+      "expected": "acme/local",
+      "source": "reqall_yml",
+      "remote": "git@github.com:acme/repo .git",
+      "files": {
+        ".reqall.yml": "project: acme/local"
+      }
+    },
+    {
       "id": "label-unquoted",
       "expected": "acme/notes",
       "source": "prompt",
@@ -385,6 +394,14 @@
       "source": "package",
       "files": {
         "go.mod": "// header\n\nmodule example.com/acme/widgets/v2\n\ngo 1.22\n"
+      }
+    },
+    {
+      "id": "go-adjacent-comment",
+      "expected": "example.com/acme/repo",
+      "source": "package",
+      "files": {
+        "go.mod": "module example.com/acme/repo//comment\n"
       }
     },
     {
