@@ -154,15 +154,11 @@
         "type": "git",
         "url": "https://github.com/ReqallSystem/cline_plugin.git"
       },
-      "package": {
-        "registry": "npm",
-        "name": "@reqall/cline-plugin"
-      },
       "homepage": "https://github.com/ReqallSystem/cline_plugin",
       "install": {
         "notes": [
-          "CLI: cline plugin install npm:@reqall/cline-plugin",
-          "VS Code/JetBrains: npx @reqall/cline-plugin install, then add `npx @reqall/cline-plugin mcp-config` to cline_mcp_settings.json"
+          "CLI: cline plugin install git:github.com/ReqallSystem/cline_plugin",
+          "VS Code/JetBrains: npx github:ReqallSystem/cline_plugin install, then add `npx github:ReqallSystem/cline_plugin mcp-config` to cline_mcp_settings.json"
         ]
       }
     },
@@ -176,14 +172,10 @@
         "type": "git",
         "url": "https://github.com/ReqallSystem/opencode_plugin.git"
       },
-      "package": {
-        "registry": "npm",
-        "name": "@reqall/opencode-plugin"
-      },
       "homepage": "https://github.com/ReqallSystem/opencode_plugin",
       "install": {
         "notes": [
-          "opencode plugin @reqall/opencode-plugin -g"
+          "Add \"github:ReqallSystem/opencode_plugin\" to the plugin array in opencode.json"
         ]
       }
     },
@@ -197,14 +189,10 @@
         "type": "git",
         "url": "https://github.com/ReqallSystem/openclaw_plugin.git"
       },
-      "package": {
-        "registry": "npm",
-        "name": "@reqall/openclaw-plugin"
-      },
       "homepage": "https://github.com/ReqallSystem/openclaw_plugin",
       "install": {
         "notes": [
-          "openclaw plugins install npm:@reqall/openclaw-plugin --accept-capabilities",
+          "openclaw plugins install git:github.com/ReqallSystem/openclaw_plugin --accept-capabilities",
           "openclaw config set plugins.entries.reqall.hooks.allowConversationAccess true",
           "openclaw mcp login reqall (or override mcp.servers.reqall with an API-key header)"
         ]

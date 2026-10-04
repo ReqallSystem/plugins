@@ -100,20 +100,23 @@ mcp_servers:
 
 ### Cline
 
-Cline CLI / Kanban load the SDK plugin; the VS Code and JetBrains extensions use file hooks:
+Cline CLI / Kanban load the SDK plugin; the VS Code and JetBrains extensions use file hooks.
+Install from GitHub:
 
 ```text
-cline plugin install npm:@reqall/cline-plugin     # CLI
-npx @reqall/cline-plugin install                  # VS Code / JetBrains: hooks, skills, rule
-npx @reqall/cline-plugin mcp-config               # MCP entry for cline_mcp_settings.json
+cline plugin install git:github.com/ReqallSystem/cline_plugin   # CLI
+npx github:ReqallSystem/cline_plugin install                    # VS Code / JetBrains: hooks, skills, rule
+npx github:ReqallSystem/cline_plugin mcp-config                 # MCP entry for cline_mcp_settings.json
 ```
 
 Source: [cline_plugin](https://github.com/ReqallSystem/cline_plugin).
 
 ### OpenCode
 
-```text
-opencode plugin @reqall/opencode-plugin -g
+Add the GitHub source to `opencode.json`:
+
+```json
+{ "plugin": ["github:ReqallSystem/opencode_plugin"] }
 ```
 
 The plugin adds the `reqall` MCP server, skills, commands and instructions through OpenCode's
@@ -122,7 +125,7 @@ The plugin adds the `reqall` MCP server, skills, commands and instructions throu
 ### OpenClaw
 
 ```text
-openclaw plugins install npm:@reqall/openclaw-plugin --accept-capabilities
+openclaw plugins install git:github.com/ReqallSystem/openclaw_plugin --accept-capabilities
 openclaw config set plugins.entries.reqall.hooks.allowConversationAccess true
 openclaw mcp login reqall
 ```
@@ -131,7 +134,7 @@ Native plugin; it does not claim the `memory` slot. Source: [openclaw_plugin](ht
 
 ### Other Agents
 
-`agent-marketplace.json` is a vendor-neutral catalog for agentic systems that want to discover the Reqall ecosystem without depending on the Claude, Codex, or Grok marketplace schemas. It lists the supported agents, source repositories, npm package names, and shared Reqall MCP/auth requirements.
+`agent-marketplace.json` is a vendor-neutral catalog for agentic systems that want to discover the Reqall ecosystem without depending on the Claude, Codex, or Grok marketplace schemas. It lists the supported agents, source repositories, npm package names where a package is published, and shared Reqall MCP/auth requirements.
 
 ## Plugin Ecosystem
 
@@ -145,9 +148,9 @@ Native plugin; it does not claim the `memory` slot. Source: [openclaw_plugin](ht
 | [@reqall/copilot-plugin](https://github.com/ReqallSystem/copilot-plugin) | GitHub Copilot | VS Code configuration |
 | [@reqall/gemini-plugin](https://github.com/ReqallSystem/gemini-plugin) | Google Gemini | Extension manifest and commands |
 | [hermes-plugin](https://github.com/ReqallSystem/hermes-plugin) | Hermes Agent | Python hooks, skills, plugin HTTP tool, optional host MCP |
-| [@reqall/cline-plugin](https://github.com/ReqallSystem/cline_plugin) | Cline | SDK plugin (CLI), VS Code file hooks, skills, MCP config |
-| [@reqall/opencode-plugin](https://github.com/ReqallSystem/opencode_plugin) | OpenCode | Server plugin: MCP, skills, commands, recall and persist hooks |
-| [@reqall/openclaw-plugin](https://github.com/ReqallSystem/openclaw_plugin) | OpenClaw | Native plugin: recall, finalize persist pass, skills, MCP |
+| [cline_plugin](https://github.com/ReqallSystem/cline_plugin) | Cline | SDK plugin (CLI), VS Code file hooks, skills, MCP config |
+| [opencode_plugin](https://github.com/ReqallSystem/opencode_plugin) | OpenCode | Server plugin: MCP, skills, commands, recall and persist hooks |
+| [openclaw_plugin](https://github.com/ReqallSystem/openclaw_plugin) | OpenClaw | Native plugin: recall, finalize persist pass, skills, MCP |
 
 ### Supporting Packages
 
