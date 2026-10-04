@@ -124,6 +124,14 @@ mcp_servers:
 
 All plugins connect to the Reqall MCP server at `https://www.reqall.net/mcp`. Use native OAuth where the host supports it; `REQALL_API_KEY` is the fallback for hosts without a compatible OAuth flow.
 
+## Project naming
+
+All agent integrations follow the [project naming contract](doc/PROJECT_NAMING.md):
+explicit override, Git origin, labelled selection, portable project metadata,
+package identity, workspace-relative path, then reserved machine memory. Reuse
+host-provided bindings; never invent a project from a directory basename.
+See the contract for compatibility rules and cross-repository conformance checks.
+
 ## SLEEP guidance checks
 
 Claude, Codex, Hermes, Grok Build, Grok Bot and Pi ship SLEEP skills. Their WORK
