@@ -110,7 +110,7 @@ def main():
         os.environ.clear()
         os.environ.update(baseline_env)
     by_id = {c["id"]: c for c in fixtures}
-    expected_hosts = {"hermes", "core", "claude", "codex", "grok", "pi", "cursor"}
+    expected_hosts = {"hermes", "core", "claude", "codex", "grok", "pi", "cursor", "cline", "opencode", "openclaw"}
     if not args.policies_only:
         expected_hosts.update({"core-public", "claude-public", "codex-public", "grok-public", "cursor-public"})
     expected_pairs = {(host, case["id"]) for host in expected_hosts for case in fixtures}

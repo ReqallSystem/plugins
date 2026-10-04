@@ -22,6 +22,9 @@ def sources_and_targets(workspace: Path):
         (workspace / "cursor-plugin/src/project-policy.ts", ts),
         (workspace / "codex-plugin/scripts/lib/project-policy.mjs", js),
         (workspace / "grok-plugin/scripts/lib/project-policy.mjs", js),
+        (workspace / "cline_plugin/lib/project-policy.mjs", js),
+        (workspace / "opencode_plugin/lib/project-policy.mjs", js),
+        (workspace / "openclaw_plugin/lib/project-policy.mjs", js),
     ]
 
 
@@ -43,7 +46,7 @@ def main():
         for path in failures:
             print(f"DRIFT: {path}")
         return 1
-    print("All five vendored policies match core." if args.check else "Synced five policy copies; rebuild TypeScript consumers.")
+    print("All eight vendored policies match core." if args.check else "Synced eight policy copies; rebuild TypeScript consumers.")
     return 0
 
 

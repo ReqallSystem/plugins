@@ -143,6 +143,72 @@
           "Restart that profile's gateway from an external shell, then /new"
         ]
       }
+    },
+    {
+      "id": "reqall-cline",
+      "name": "reqall",
+      "displayName": "Reqall for Cline",
+      "agent": "cline",
+      "description": "Cline SDK plugin (CLI/Kanban) plus VS Code file hooks, skills, rule, and MCP config for persistent project memory.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/cline_plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/cline-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/cline_plugin",
+      "install": {
+        "notes": [
+          "CLI: cline plugin install npm:@reqall/cline-plugin",
+          "VS Code/JetBrains: npx @reqall/cline-plugin install, then add `npx @reqall/cline-plugin mcp-config` to cline_mcp_settings.json"
+        ]
+      }
+    },
+    {
+      "id": "reqall-opencode",
+      "name": "reqall",
+      "displayName": "Reqall for OpenCode",
+      "agent": "opencode",
+      "description": "OpenCode server plugin: MCP server, skills, commands, per-message recall, and a persist follow-up on idle.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/opencode_plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/opencode-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/opencode_plugin",
+      "install": {
+        "notes": [
+          "opencode plugin @reqall/opencode-plugin -g"
+        ]
+      }
+    },
+    {
+      "id": "reqall-openclaw",
+      "name": "reqall",
+      "displayName": "Reqall for OpenClaw",
+      "agent": "openclaw",
+      "description": "Native OpenClaw plugin: recall before prompts, a persist revision before finalize, skills, and a declared Reqall MCP server.",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ReqallSystem/openclaw_plugin.git"
+      },
+      "package": {
+        "registry": "npm",
+        "name": "@reqall/openclaw-plugin"
+      },
+      "homepage": "https://github.com/ReqallSystem/openclaw_plugin",
+      "install": {
+        "notes": [
+          "openclaw plugins install npm:@reqall/openclaw-plugin --accept-capabilities",
+          "openclaw config set plugins.entries.reqall.hooks.allowConversationAccess true",
+          "openclaw mcp login reqall (or override mcp.servers.reqall with an API-key header)"
+        ]
+      }
     }
   ]
 }

@@ -16,6 +16,9 @@ SKILLS = {
     "grok-plugin": "skills/sleep/SKILL.md",
     "grok-bot-plugin": "skills/reqall-sleep/SKILL.md",
     "pi-plugin": "skills/reqall-sleep/SKILL.md",
+    "cline_plugin": "skills/reqall-sleep/SKILL.md",
+    "opencode_plugin": "skills/reqall-sleep/SKILL.md",
+    "openclaw_plugin": "skills/reqall-sleep/SKILL.md",
 }
 HEADING = "## WORK review policy"
 REQUIRED = (
@@ -42,7 +45,7 @@ class SleepGuidanceTests(unittest.TestCase):
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, block)
 
-    def test_six_shipped_skills_match_canonical_policy(self):
+    def test_shipped_skills_match_canonical_policy(self):
         canonical = policy(CANONICAL.read_text())
         for repo, relative in SKILLS.items():
             with self.subTest(repo=repo):

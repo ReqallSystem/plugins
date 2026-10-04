@@ -12,6 +12,9 @@ const policies = {
   grok: await load('grok-plugin/scripts/lib/project-policy.mjs'),
   pi: await load('pi-plugin/extensions/project-policy.ts'),
   cursor: await load('cursor-plugin/dist/project-policy.js'),
+  cline: await load('cline_plugin/lib/project-policy.mjs'),
+  opencode: await load('opencode_plugin/lib/project-policy.mjs'),
+  openclaw: await load('openclaw_plugin/lib/project-policy.mjs'),
 };
 const publicResolvers = policiesOnly ? {} : {
   'core-public': async c => (await load('core/dist/detect-project.js')).detectProject(c.cwd, c.prompt),

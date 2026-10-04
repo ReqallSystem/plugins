@@ -173,6 +173,32 @@ After publishing, confirm this aggregate marketplace repo still points to `https
 
 ---
 
+## @reqall/cline-plugin, @reqall/opencode-plugin, @reqall/openclaw-plugin
+
+No build step; plain ESM plus vendored `lib/project-policy.mjs` (keep in sync with
+`scripts/sync-project-naming.py`). Repos are `cline_plugin`, `opencode_plugin` and
+`openclaw_plugin`.
+
+```bash
+cd cline_plugin   # or opencode_plugin / openclaw_plugin
+
+# 1. Bump package.json (openclaw_plugin: also openclaw.plugin.json "version")
+
+# 2. Offline tests, CLI/manifest checks and pack listing
+npm test
+
+# 3. Publish to npm
+npm publish --access public
+
+# 4. Push to GitHub
+git add -A && git commit -m "v<VERSION>" && git push
+```
+
+After publishing, the catalog entries in `agent-marketplace.json` need no change
+unless the repository or package name moves.
+
+---
+
 ## plugins (marketplace aggregate)
 
 This repo defines four catalog surfaces:

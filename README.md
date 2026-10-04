@@ -98,6 +98,37 @@ mcp_servers:
       Authorization: Bearer ${REQALL_API_KEY}
 ```
 
+### Cline
+
+Cline CLI / Kanban load the SDK plugin; the VS Code and JetBrains extensions use file hooks:
+
+```text
+cline plugin install npm:@reqall/cline-plugin     # CLI
+npx @reqall/cline-plugin install                  # VS Code / JetBrains: hooks, skills, rule
+npx @reqall/cline-plugin mcp-config               # MCP entry for cline_mcp_settings.json
+```
+
+Source: [cline_plugin](https://github.com/ReqallSystem/cline_plugin).
+
+### OpenCode
+
+```text
+opencode plugin @reqall/opencode-plugin -g
+```
+
+The plugin adds the `reqall` MCP server, skills, commands and instructions through OpenCode's
+`config` hook. Source: [opencode_plugin](https://github.com/ReqallSystem/opencode_plugin).
+
+### OpenClaw
+
+```text
+openclaw plugins install npm:@reqall/openclaw-plugin --accept-capabilities
+openclaw config set plugins.entries.reqall.hooks.allowConversationAccess true
+openclaw mcp login reqall
+```
+
+Native plugin; it does not claim the `memory` slot. Source: [openclaw_plugin](https://github.com/ReqallSystem/openclaw_plugin).
+
 ### Other Agents
 
 `agent-marketplace.json` is a vendor-neutral catalog for agentic systems that want to discover the Reqall ecosystem without depending on the Claude, Codex, or Grok marketplace schemas. It lists the supported agents, source repositories, npm package names, and shared Reqall MCP/auth requirements.
@@ -114,6 +145,9 @@ mcp_servers:
 | [@reqall/copilot-plugin](https://github.com/ReqallSystem/copilot-plugin) | GitHub Copilot | VS Code configuration |
 | [@reqall/gemini-plugin](https://github.com/ReqallSystem/gemini-plugin) | Google Gemini | Extension manifest and commands |
 | [hermes-plugin](https://github.com/ReqallSystem/hermes-plugin) | Hermes Agent | Python hooks, skills, plugin HTTP tool, optional host MCP |
+| [@reqall/cline-plugin](https://github.com/ReqallSystem/cline_plugin) | Cline | SDK plugin (CLI), VS Code file hooks, skills, MCP config |
+| [@reqall/opencode-plugin](https://github.com/ReqallSystem/opencode_plugin) | OpenCode | Server plugin: MCP, skills, commands, recall and persist hooks |
+| [@reqall/openclaw-plugin](https://github.com/ReqallSystem/openclaw_plugin) | OpenClaw | Native plugin: recall, finalize persist pass, skills, MCP |
 
 ### Supporting Packages
 
@@ -134,12 +168,12 @@ See the contract for compatibility rules and cross-repository conformance checks
 
 ## SLEEP guidance checks
 
-Claude, Codex, Hermes, Grok Build, Grok Bot and Pi ship SLEEP skills. Their WORK
+Claude, Codex, Hermes, Grok Build, Grok Bot, Pi, Cline, OpenCode and OpenClaw ship SLEEP skills. Their WORK
 review policy follows [the canonical SLEEP documentation](https://github.com/fingerskier/reqall_net/blob/main/doc/SLEEP.md):
 compare with intent and existing knowledge, preserve new evidence even when work
 aligns, and discard only when no unique durable information remains.
 
-With those six repositories and `reqall_net` checked out beside this repository,
+With those nine repositories and `reqall_net` checked out beside this repository,
 run `python -B -m unittest discover -s test -p 'test_sleep_guidance.py' -v`.
 The offline checks cover instruction parity, judgment examples and Claude's tool
 allowlist; they do not evaluate model judgment or perform live SLEEP mutations.
